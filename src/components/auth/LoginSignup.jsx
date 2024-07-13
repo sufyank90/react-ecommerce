@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
 import { RiMentalHealthFill } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 function LoginSignup() {
     const [openModal, setOpenModal] = useState(false);
@@ -107,7 +108,7 @@ function LoginSignup() {
                 <div className="flex justify-between items-center">
                     <div className="text-teal-400 text-xl font-bold pl-2">WEB-STORE</div>
                     <div className="text-white space-x-4">
-                        <a href="/" className="hover:text-gray-300">Home</a>
+                        <Link to="/" className="hover:text-gray-300">Home</Link>
                         <button
                             id="mega-menu-full-dropdown-button"
                             onClick={toggleDropdown}
@@ -132,7 +133,7 @@ function LoginSignup() {
                         </button>
                         <a href="#about" className="hover:text-gray-300">About</a>
                         <a href="#values" className="hover:text-gray-300">Values</a>
-                        <a href="/contact" className="hover:text-gray-300">Contact Us</a>
+                        <Link to="/contact" className="hover:text-gray-300">Contact Us</Link>
                     </div>
                     <div className='pr-1'>
                         <button onClick={() => setOpenModal(true)} className="text-teal-400 border-2  border-teal-400 font-bold py-2 px-4 rounded-full">Login</button>
